@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor() { }
+ 
+  constructor( ) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +28,8 @@ export class LoginComponent implements OnInit {
         this.correcto = 1;
         if (this.pass === this.pass_correcto){
           this.correcto = 1;
+          let barra=document.getElementById("barra");
+          barra?.classList.remove("visually-hidden");
         } else {
           this.correcto = 0;
         }
